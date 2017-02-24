@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   <p><a href="/">{{ site.title }}</a></p>
   <p>{{ site.blurb }}</p>
 
@@ -15,4 +15,26 @@
       {% endif %}
     {% endfor %}
   </ul>
-</header>
+</header> -->
+
+<div class="header caps">
+  <h1><a href="/index.html">Michael Sefranek</a></h1>
+  <p class="subtitle">Ideas from another dimension</p>
+</div>
+
+<div class="header nav clearfix">
+
+  <div class="soclinks clearfix">
+    <a href="https://twitter.com/MalastrumDomini?lang=en" class="s--twitter">A</a>
+    <a href="https://github.com/MalastrumDominiSui" class="s--github">P</a>
+    <a class="s--rss">L</a>
+  </div>
+
+  <div class="sitelinks clearfix">
+      {% for the_page in site.pages %}
+        {% if the_page.title %}
+        <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>
+        {% endif %}
+      {% endfor %}
+  </div>
+</div>

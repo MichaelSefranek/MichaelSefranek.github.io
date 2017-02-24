@@ -1,3 +1,243 @@
+.gutter{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@font-face {
+    font-family: 'SocialType';
+    src: url('SocialType.ttf');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    font-family: 'Open Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(0,0,0,.01) 0 0 1px;
+}
+
 body{
-  background-color: grey;
+    margin: 0;
+    padding: 0;
+
+}
+
+.dark{
+    color:#404040;;
+}
+
+.header{
+    padding: 24px 14px 24px 14px;
+    background-color: #404040;
+    color:white;
+}
+
+.header a{
+	text-decoration: none;
+	color: white;
+}
+
+.caps{
+    text-transform: uppercase;
+}
+
+h1{
+    padding:0 0 0 0;
+    margin:0 0 0 0;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.header p{
+    padding: 0 0 0 0 ;
+    font-size:13px;
+    margin:0;
+    color: white;
+    opacity: 0.6;
+}
+
+.nav{
+    padding: 14px 13px 13px 14px;
+    background-color:#f6eeee;
+
+
+}
+
+.soclinks{
+    float: left;
+}
+
+.soclinks a{
+    text-decoration:none;
+    opacity: 1;
+    float: left;
+    display:inline-block;
+    font-family:'SocialType';
+    font-size: 40px;
+    margin-top:8px;
+    padding-left:0px;
+    letter-spacing: 0.2em;
+    color:#cccccc;
+}
+
+.soclinks a:hover{
+/*    text-shadow: 0px 1px 2px black;*/
+    cursor:pointer;
+}
+
+.s--github:hover{
+    color:black;
+}
+
+.s--rss:hover{
+    color:#FF6600;
+}
+
+.s--twitter:hover{
+    color:#0084b4;
+}
+
+.sitelinks{
+    margin-top: 14px;
+    font-size: 14px;
+    letter-spacing: 0.01em;
+    float: right;
+}
+
+.sitelinks a{
+    font-weight: 600;
+    padding:0 7px 0 7px;
+    text-decoration: none;
+    color:#2F4F4F;
+}
+.sitelinks a:hover{
+    cursor:pointer;
+    color:#00e699;
+}
+
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.narrow{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+hr{
+    border-top:1px;
+    color:#404040;
+    border-left:none;
+    margin:22px 0 22px 0;
+}
+
+.fade{
+    color: #404040;
+    opacity: 0.4;
+    line-height: 22px;
+    font-weight: 600;
+}
+
+.date{
+    margin-top:25px;
+    font-size:13px;
+    font-weight: 400;
+}
+
+h2{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:26px;
+    font-weight:600;
+    color:#404040;
+    letter-spacing: -0.03em;
+}
+
+p{
+    font-size: 15px;
+}
+
+.title{
+    margin-top:35px;
+    margin-bottom:19px;
+    font-size:13px;
+    letter-spacing: 0.11em;
+}
+
+.article {
+    margin-top:5px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    line-height: 1.4em;
+}
+
+.captions{
+    font-size:13px;
+    opacity:0.6;
+}
+
+.article_img{
+    width: 100%;
+    box-sizing: border-box;
+    text-align:center;
+    padding:7px;
+}
+
+.article_img a{
+    text-decoration: none;
+    font-size: 20px;
+    color:black;
+}
+.article_img a:hover{
+    color: #00e699;
+    cursor: pointer;
+}
+
+
+.article_img img{
+    width: 90%;
+}
+
+ul {
+    list-style-type: square;
+    margin-bottom:20px 0 20px 0;}
+
+.plainlink{
+    text-decoration:none;
+    color:#404040;
+}
+
+.plainlink:hover{
+    color:#00e699;
+}
+
+.sitelink a{
+    text-decoration:underline;
+}
+.sitelink a:hover{
+    color:#00e699;
+}
+
+.sitelink a:visited{
+    color:#404040;
+}
+.sitelink a:visited:hover{
+    color:#00e699;
+}
+
+sup, sub {
+    vertical-align: baseline;
+    position: relative;
+    top:-0.4em;
+}
+
+sub {
+    top: 0.4em;
 }

@@ -1,17 +1,25 @@
 ---
 layout: default
 ---
+<div class=gutter>
+<h1 class="fade title caps contentheader">Recent Articles</h1>
+	<hr>
+</div>
 
-<h1>Recent Articles</h1>
 
 {% for post in site.posts %}
-  <div>
-    <small>{{ post.date | date: "%b %-d, %Y" }}</small>
+  <div class="gutter">
+    <small class="fade date">{{ post.date | date: "%b %-d, %Y" }}</small>
     <br>
-    <a href="{{ post.url }}">{{ post.title }}</a>
+    <h2>
+    	<a class="plainlink" href="{{ post.url }}">{{ post.title }}</a>
+    </h2>
     
-    {{ post.excerpt }}
-
+    
+    <div class="fade article">
+    	{{ post.excerpt }}
+    </div>
+    cp
     <hr>
   </div>
 {% endfor %}
