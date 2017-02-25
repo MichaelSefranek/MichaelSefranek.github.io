@@ -8,7 +8,13 @@
     src: url('SocialType.ttf');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face{
+    font-family:'social_font';
+    src: url('social_font.ttf');
+    font-weight:normal;
+    font-style:normal;
 }
 
 html{
@@ -23,6 +29,14 @@ body{
 
 }
 
+.f_left{
+    float:left;
+}
+
+.f_right{
+    float:right;
+}
+
 .dark{
     color:#404040;
 
@@ -32,6 +46,9 @@ body{
     padding: 22px 14px 22px 14px;
     background-color: #404040;
     color:white;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05),
+                2px 2px 3px rgba(0,0,0,0.07),
+               -1px -1px 30px rgba(0,0,0,0.1);
 }
 
 .header a{
@@ -51,6 +68,29 @@ h1{
     text-align: left;
 }
 
+.hamburger {
+  position: relative;
+  top:10px;
+  padding-left: 1.25em;
+}
+
+.hamburger:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25em;
+  width: 1.0em;
+  height: 0.13em;
+  background: white;
+  box-shadow: 
+    0 5px 0 0 white,
+    0 10px 0 0 white;
+}
+
+.hamburger:hover {
+    color:green;
+}
+
 h3{
     font-size:19px;
     font-weight: 500;
@@ -67,8 +107,30 @@ h3{
 .nav{
     padding: 14px 13px 13px 14px;
     background-color:#f6eeee;
+}
 
+.twitter_icon{
+    font-family:"social_font";
+    font-size: 35px;
+    color:#0084b4;
+    align-self:center;
+}
 
+.twitter_share{
+    padding:0 15px 0 15px;
+    font-size: 14px;
+    color:#404040;
+    opacity: 0.8;
+
+}
+.twitter_share a{
+    text-decoration: underline;
+    color:#404040;
+}
+
+.flexy{
+    display:flex;
+    justify-content: center;
 }
 
 .soclinks{
@@ -89,7 +151,6 @@ h3{
 }
 
 .soclinks a:hover{
-/*    text-shadow: 0px 1px 2px black;*/
     cursor:pointer;
 }
 
@@ -206,9 +267,8 @@ p{
 
 .article {
     margin-top:5px;
-    font-size: 16px;
     font-weight: 400;
-    line-height: 1.375em;
+    line-height: 1.3em;
 
 }
 
