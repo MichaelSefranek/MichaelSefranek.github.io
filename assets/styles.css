@@ -24,11 +24,12 @@ body{
 }
 
 .dark{
-    color:#404040;;
+    color:#404040;
+
 }
 
 .header{
-    padding: 24px 14px 24px 14px;
+    padding: 22px 14px 22px 14px;
     background-color: #404040;
     color:white;
 }
@@ -48,6 +49,11 @@ h1{
     font-size: 20px;
     font-weight: 600;
     text-align: left;
+}
+
+h3{
+    font-size:19px;
+    font-weight: 500;
 }
 
 .header p{
@@ -117,6 +123,34 @@ h1{
     color:#00e699;
 }
 
+.plainlink{
+    text-decoration:none;
+    color:#404040;
+}
+
+.plainlink:hover{
+    color:#00e699;
+}
+
+.sitelink a{
+    text-decoration:underline;
+}
+.sitelink a:hover{
+    color:#00e699;
+}
+
+.sitelink a:visited{
+    color:#404040;
+}
+.sitelink a:visited:hover{
+    color:#00e699;
+}
+
+.articlelink{
+    text-decoration:underline;
+    color:#404040;
+}
+
 .clearfix:after { 
    content: "."; 
    visibility: hidden; 
@@ -140,20 +174,20 @@ hr{
 .fade{
     color: #404040;
     opacity: 0.4;
-    line-height: 22px;
+    line-height: 1.375em;
     font-weight: 600;
 }
 
 .date{
     margin-top:25px;
-    font-size:13px;
+    font-size:14px;
     font-weight: 400;
 }
 
 h2{
     margin-top:10px;
     margin-bottom:10px;
-    font-size:26px;
+    font-size:28px;
     font-weight:600;
     color:#404040;
     letter-spacing: -0.03em;
@@ -174,8 +208,8 @@ p{
     margin-top:5px;
     font-size: 16px;
     font-weight: 400;
-    line-height: 20px;
-    line-height: 1.4em;
+    line-height: 1.375em;
+
 }
 
 .captions{
@@ -209,28 +243,7 @@ ul {
     list-style-type: square;
     margin-bottom:20px 0 20px 0;}
 
-.plainlink{
-    text-decoration:none;
-    color:#404040;
-}
 
-.plainlink:hover{
-    color:#00e699;
-}
-
-.sitelink a{
-    text-decoration:underline;
-}
-.sitelink a:hover{
-    color:#00e699;
-}
-
-.sitelink a:visited{
-    color:#404040;
-}
-.sitelink a:visited:hover{
-    color:#00e699;
-}
 
 sup, sub {
     vertical-align: baseline;
