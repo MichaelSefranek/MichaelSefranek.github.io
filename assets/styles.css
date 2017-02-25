@@ -87,9 +87,14 @@ h1{
     0 10px 0 0 white;
 }
 
-.hamburger:hover {
-    color:green;
+.hamburger:hover{
+    background:black;
 }
+
+a.hamburger{
+    padding:0 0 0 16px;
+}
+
 
 h3{
     font-size:19px;
@@ -282,6 +287,12 @@ p{
     box-sizing: border-box;
     text-align:center;
     padding:7px;
+}
+.article_img p{
+    font-size:11px;
+    font-style:italic;
+    text-align:left;
+    width:90%;
 }
 
 .article_img a{
