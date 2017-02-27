@@ -5,7 +5,7 @@
     <p class="subtitle">Ideas from another dimension</p>
   </div>
 
-  <div id="centerlinks" class="soclinks">
+  <div class="soclinks hidewhensmall">
     <a href="https://twitter.com/MalastrumDomini?lang=en" class="s--twitter">A</a>
     <a href="https://github.com/MalastrumDominiSui" class="s--github">P</a>
     <a class="s--rss">L</a>
@@ -16,11 +16,19 @@
     <a href="#menu" class="hamburger"></a>
   </div>
 
+  <div class="sitelinks hidewhensmall">
+    {% for the_page in site.pages %}
+      {% if the_page.title %}
+      <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>
+      {% endif %}
+    {% endfor %}
+  </div>
+
 </div>
 
 
 
-<div id="navbar" class="header nav clearfix">
+<div id="navbar" class="header nav clearfix hidewhenbig">
 
   <div class="soclinks clearfix">
     <a href="https://twitter.com/MalastrumDomini?lang=en" class="s--twitter">A</a>
@@ -28,7 +36,7 @@
     <a class="s--rss">L</a>
   </div>
 
-  <div class="sitelinks clearfix">
+  <div class="sitelinks">
       {% for the_page in site.pages %}
         {% if the_page.title %}
         <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>

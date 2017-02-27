@@ -1,5 +1,6 @@
 ---
 title:  "Doopey Doopey Doo"
+image:  "/assets/rock.jpg"
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

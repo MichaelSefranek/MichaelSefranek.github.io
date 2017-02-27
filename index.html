@@ -11,9 +11,12 @@ layout: default
   <div class="gutter">
     <small class="fade date">{{ post.date | date: "%b %-d, %Y" }}</small>
     <br>
+
+    <img class="small_image" src={{post.image}}>
     <h2>
-    	<a class="plainlink" href="{{ post.url }}">{{ post.title }}</a>
+        <a class="plainlink" href="{{ post.url }}">{{ post.title }}</a>
     </h2>
+ 
     
     
     <div class="fade article">
