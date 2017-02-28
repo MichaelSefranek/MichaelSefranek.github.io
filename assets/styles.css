@@ -61,6 +61,13 @@ body{
     display:none;
 }
 
+.flex-between{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    align-content:center;
+}
+
 h3{
     font-size:19px;
     font-weight: 500;
@@ -69,10 +76,6 @@ h3{
 /*style and placement of the header and its children*/
 
 .header{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    align-content:center;
     position: relative;
     z-index:2;
     padding: 22px 14px 22px 14px;
@@ -109,8 +112,6 @@ h1{
 }
 
 #centerlinks{
-    display:none;
-    align-self: center;
     padding-right:100px;
 }
 
