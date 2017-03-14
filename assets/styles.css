@@ -115,8 +115,8 @@ h1{
     padding-right:100px;
 }
 
-/*styling and placement of nav button inside header*/
-.hamburger {
+/*all styling of the nav icon*/
+/*.hamburger {
   position: relative;
   padding-left: 1.25em;
 }
@@ -136,6 +136,76 @@ h1{
 
 a.hamburger{
     padding:0 0 0 18px;
+}*/
+
+/*new nav styling*/
+
+#nav-icon1{
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#nav-icon1 span{
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .75s ease-in-out;
+  -moz-transition: .75s ease-in-out;
+  -o-transition: .75s ease-in-out;
+  transition: .75s ease-in-out;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 18px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 36px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(495deg);
+  -moz-transform: rotate(495deg);
+  -o-transform: rotate(495deg);
+  transform: rotate(495deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-315deg);
+  -moz-transform: rotate(-315deg);
+  -o-transform: rotate(-315deg);
+  transform: rotate(-315deg);
 }
 
 .nav_container{
@@ -421,3 +491,4 @@ sup, sub {
 sub {
     top: 0.4em;
 }
+
