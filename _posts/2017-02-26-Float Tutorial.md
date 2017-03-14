@@ -2,9 +2,9 @@
 title:  "On the Subject of Floats"
 ---
 
-Floats..  
+One of the more curious features of arranging elements through CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS.  
 
-One of the more curious features of arranging elements through CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS.  The name is cryptically general. You may begin to ask: "Should I think about a floated element as floating above the page? Is it floating to the top, or somewhere in the z-index?"  I aim to help answer these questions and more in this article.
+The name is cryptically general. You may begin to ask: "Should I think about a floated element as floating above the page? Is it floating to the top, or somewhere in the z-index?"  I aim to help answer these questions and more in this article.
 
 As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using.  I know this, because I have done it.  With a name like float we can be left wondering how should I plan to use this tool?
 

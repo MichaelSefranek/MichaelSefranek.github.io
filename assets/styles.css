@@ -161,7 +161,7 @@ a.hamburger{
   position: absolute;
   height: 7px;
   width: 100%;
-  background: #d3531a;
+  background: white;
   border-radius: 2px;
   opacity: 1;
   left: 0;
@@ -365,7 +365,7 @@ a.hamburger{
     .header p{
         color: #404040;
     }
-    #navclick{
+    #nav-icon1{
         visibility:hidden;
     }
     .hidewhensmall{
