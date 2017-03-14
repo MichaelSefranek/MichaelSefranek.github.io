@@ -294,7 +294,7 @@ a.hamburger{
 .s--twitter:hover{
     color:#0084b4;
 }
-
+/*hero image*/
 .hero{
     height:300px;
     background-image: url("/assets/hero.jpg");
@@ -303,7 +303,7 @@ a.hamburger{
     margin:auto;
 
 }
-
+/*various href styling*/
 .sitelinks{
     position:absolute;
     z-index:3;
@@ -352,6 +352,7 @@ a.hamburger{
     color:#404040;
 }
 
+/*media query for changing when small*/
 @media (min-width: 768px)  {
     .hidewhenbig{
         display:none;
@@ -461,19 +462,12 @@ p{
 }
 
 .note{
-    padding:14px;
+    padding:20px 10px 20px 10px;
     background-color:#E5FFF6;
-    position:relative;
-    left:-20px;
-    width:100%;
 }
 
 code{
-    padding:14px;
     background-color:#e6e6e6;
-    position:relative;
-    left:-20px;
-    width:100%;
 }
 
 ul {

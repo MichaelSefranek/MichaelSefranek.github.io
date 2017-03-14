@@ -1,113 +1,106 @@
 ---
-title:  "Omaha Code School: From the Top"
+title:  "A Mac OS Environment: From the Top"
 image: "/assets/ocs.png"
 date:   2017-03-13 10:44:01 -0600
 ---
+I don't know how unusual my perspective is, but I actually enjoy setting up and debugging my developer environment from scratch. Recently my 2010 Mac and it's carefully constructed environment kicked the bucket. As a result I am making this as a future reference to myself. Perhaps it may be useful to other coders or students.
 
-Welcome to this page. I am making this as a future reference to myself, in the case I ever need to set up my own developer environment from scratch.  This is specifically for Mac OS environment, but could likely be adapted for other environments.
+I also wanted to make some notes on how everything ties together, and any mistakes that I made along the way. This is specifically for Mac OS environment, but could likely be adapted for other environments.
 
-defaults write com.apple.Finder AppleShowAllFiles YES
+One of the first things I do on a brand new Mac is to open a terminal window and enter:<br>
+<code>$ defaults write com.apple.Finder AppleShowAllFiles YES</code> [^1]<br>
+into the command line. It is helpful during this process to see where all folders and files are, even if they are hidden by default.
 
-The first thing we do is install Sublime Text 3.
+Somewhere along the journey you will need a text editor. Personally I have chosen [Sublime Text 3](https://www.sublimetext.com/3), I have heard that [Atom](https://atom.io/) is also good, thought slightly slower.
 
-Next thing we open Terminal to install Oh My Zsh
-github.com/robbyrussell/oh-my-zsh#basic-installation
+Next we need to install Oh My Zsh! You need to have a Unix-like system (macOS or Linux).
 
-This is composed of some steps.  First ensure your system must be Unix-like (macOS or Linux)
-Next Zsh must be installed.  My new MacBook Air has come with Zsh 5.2, so you can confirm this by typing in zsh —-version to confirm.  If not you can type sudo apt-get install zsh and let it crank.
+[Install Oh my Zsh here](https://github.com/robbyrussell/oh-my-zsh#basic-installation).
 
-github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH
+Notice the Github page says you need all of these: Zsh, Curl or wget, and git.
 
-Curl or wget should be installed
+Zsh should be installed on Mac by default.  My new MacBook has come with Zsh 5.2.[^n] If you don't for some reason, you can install it [here](github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH).
 
-Git should be installed
+I installed Oh My Zsh! using Curl; another tool which should already be installed on a mac. It basically grabs or sends data to/from a server (using one of many data protocols).
 
-if you attempt to type git —-version you may get prompted by the command line to install developer tools
+{:.note}
+_Note: If you are ever unsure about a component of your install you can always type_ <br>
+<code>$&lt;component&gt; -v</code>... _or in this specific case_ <code>$curl --version</code>.<br>
+<br>
+_Note: If you are ever unsure about __where__ a component is installed, you can try typing_ <br>
+ <code>$which &lt;component&gt;</code>
+{:.done}
 
-Trying this- I haven’t before it may produce unexpected results later. I didn’t select get Xcode, I selected install.  It may be a good idea to make sure there are no additional updates available to your computer before you do this.
+Lastly, if you type in <code>$ git --version</code> you may be prompted to install Xcode developer tools on Mac. I selected "install". It may be a good idea to make sure your OS doesn't have any pending updates before doing this. After this isntalls, you can confirm git has been installed with another <code>$ git --version</code>
 
-Installing Xcode may not be necessary, or only necessary for Mac development.
+As it states on Robby Russel's site, the next step is: <br>
 
-Hitting install is sufficient, since Git is now installed.
+<code>$ Sh -c “$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”</code>
 
-Install Zsh via curl
+Time to admit mistakes! At this point I tried to skip a step in my install. Namely: I wanted to open files with a handy shortcut that allows me to type <code>$ subl &lt;any_file&gt;</code> to open it in sublime text. The problem is that I needed to make a shortcut (or symbolic link) between the subl executable file, and typing "subl" in the console.  Simple right?
 
-Sh -c “$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)”
+The problem is that this required me to make a symbolic link to usr/local/bin, and I missed an essential step, to install Homebrew.
 
-Interestingly at this point I tried to see what happened when I skipped this step.  I tried to create a symlink to Sublime Text 3 and there was no usr/local/bin directory.  We desperately need this to make our life more convenient, so the next step is to install
+Homebrew can be installed [here](htpps://homebrew.sh).
+If you are on Linux and trying to mimic this setup you will have to look at Linux brew.
 
-Homebrew.
+Homebrew basically makes life easier for installation of packages, so that they can be installed in their own directory, and then symbolically linked into /usr/local. My previous step was dependant on this step for sure.
 
-htpps://homebrew.sh
+After Homebrew is installed you should be able to make the shortcut to Sublime Text:
 
-This installs packages to their own directory and then symlinks their files into /usr/local
+<code>$ ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl</code>
 
-Then 
-$ brew install rbenv
-Then run
+Next we get more specific, since an important part of class is learning Ruby, we use a Ruby manager called rbenv. This manages ruby versions, and gems and their interconnections, to put it very simply. <br>
+Run <code>$ brew install rbenv</code><br>
+
+<code>
 $rbenv init
+</code><br>
+And so you don't have to do this every new Terminal session, you need to add this code to the end of your .zhrc file.  You may ask yourself where this file is, and it _is_ a little hard to spot. It is hiding in the home directory. If you have done everything previously you should be able to type <code>subl ~/.zshrc</code> and it should open.  Go to the very last line and type <code>eval "$(rbenv init -)"</code> exactly. Save and close and then close terminal.
 
-Then add this line to the end of the ~/.zhrc file
-eval “$rbenv init -)”
+Open a new terminal and type in:<code>$ rbenv rehash</code>
 
-So to open it you can use our new handy tool
-subl ~/.zshrc
-And add it in there and save
+This is a command that basically rebuilds connections called shims between rbenv and everything associated with it.  It is a good idea to run rbenv rehash every time you install or switch to a new Ruby version.
 
-Then rbenv install 2.4.0
+Install ruby by typing <code>$ rbenv install 2.4.0</code> and let it run.
 
-then rbenv global 2.4.0 to set system defaul to 2.4.0 version
+When it finishes run <code>$ rbenv global 2.4.0</code> to set the global version of ruby. So then <code>$ rbenv rehash</code> again.
 
-then rbenv rehash
+This is all good and well right? But to access github repositories, which means doing some more configuration. This means getting your RSA key fingerprint and adding it to your github settings for your new device.
 
-rub rbenv rehash every time you install or switch to a new Ruby version
-Verify by running ruby -v in Terminal
+There are good instructions on doing this [here](https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/)
 
-next i realized I need to set up github by setting my github username and password
-This means getting your RSA key fingerprint and adding it to your github settings for your new device.
+Make sure to run these:
 
-Do this basically:
-https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
+<code>
+$ git config --global user.name "Your Name"<br>
+$ git config --global user.email you@example.com
+</code>
 
-https://github.com/bundler/bundler
+Another issue I ran into was that github would continue asking for my password repeatedly when I was cloning my repositories.  This was a minor annoyance but fixable:
+These commands helped to fix this issue by caching my password:
 
-brew install postgresql
+<code>
+ $ git config --global credential.helper osxkeychain
+ $ ssh-add -K ~/.ssh/id_rsa	
+</code>
 
-bundle install for anything with a gemfile
 
-otherwise install gems one by one
+A great way to manage ruby and your projects is to use bundler.  That way when you are getting up to speed from a new device, you can do a bundle install from the directory your project is in.
 
-To install Postgres and the Ruby Postgres adapter:
+Install bundler [here](https://github.com/bundler/bundler)
 
-brew install postgresql
-gem install pg -- --with-pg-config=/usr/local/bin/pg_config
 
-I am having trouble installing pg .
-Not good.
 
-So this was the issue, I had not run this initial command:
+For me, I had to <code>$ brew install postgresql</code> to get my sequel database running again, and I ran into issues later with postgres and the ruby pg gem.  The gem is installed via <code>gem install pg -- --with-pg-config=/usr/local/bin/pg_config</code>. 
 
-pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+It turns out I had forgotten to run this initial command: 
+<code>$ pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start</code>
+Which manually initializes the postgresql server, and allowed me to recreate the databases I had running from my previous projects.
 
-this manually starts the postgres server on your machine.
-
-now I have a problem with bundler in my directory.
-Nevermind, I had to run bundle install, and this solved everything now.  My directory is running.
-
-lastly i need to setup git password to be cached
-
-I tried this:
- git config --global credential.helper osxkeychain
-
-Now i need git to remember my SSH password permanently:
-
-ssh-add ~/.ssh/id_rsa &>/dev/null
-trying this: 
-it worked.
-but apparently this adds it permanently after doing the first one
-ssh-add -K ~/.ssh/id_rsa
 
 install sublime text package control.
 
-git config --global user.name "Your Name"
-git config --global user.email you@example.com
+[^1]: The "$" convention will be used here, whenever you see this character, it simply indicates a command to type in Terminal, not to actually type "$" itself.
+
+[^n]: Zsh is a command shell, which means that it is an interface set up for the user to type commands directly to the user. Zsh is a succesor to Bash, which is a successor to Sh, which has been around since 1977!

@@ -6,9 +6,9 @@ One of the more curious features of arranging elements through CSS.  Part of the
 
 The name is cryptically general. You may begin to ask: "Should I think about a floated element as floating above the page? Is it floating to the top, or somewhere in the z-index?"  I aim to help answer these questions and more in this article.
 
-As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using.  I know this, because I have done it.  With a name like float we can be left wondering how should I plan to use this tool?
+As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using. With a name like float we can be left wondering how should I plan to use this tool?
 
-A float is a display style, specifically to create a "wrapping" effect.  Let's start with an example. Say I have a block of text inside p tags.
+A float is a display style, specifically to create a "wrapping" effect like you see in newspaper or magazine articles.  Let's start with an example. Say I have a block of text inside p tags.
 
 Now to experiment, let me make a new div, give it some dimensions and a background color, and give it float left. Our html and css looks like this:
 
