@@ -1,15 +1,8 @@
 @font-face {
-    font-family: 'SocialType';
-    src: url('SocialType.ttf');
+    font-family: 'Social Circles';
+    src: url('Social Circles v1.1.otf');
     font-weight: normal;
     font-style: normal;
-}
-
-@font-face{
-    font-family:'social_font';
-    src: url('social_font.ttf');
-    font-weight:normal;
-    font-style:normal;
 }
 
 /*general styling class elements*/
@@ -199,7 +192,7 @@ h1{
 
 /*social media buttons styling*/
 .twitter_icon{
-    font-family:"social_font";
+    font-family:"Social Circles";
     font-size: 35px;
     color:#0084b4;
     align-self:center;
@@ -225,10 +218,9 @@ h1{
 
 .soclinks a{
     text-decoration:none;
-    opacity: 1;
     float: left;
     display:inline-block;
-    font-family:'SocialType';
+    font-family:'Social Circles';
     font-size: 40px;
     margin-top:8px;
     padding-left:0px;
