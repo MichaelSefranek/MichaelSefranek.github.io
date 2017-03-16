@@ -6,7 +6,7 @@ window.addEventListener("load",function(){
 
 	navButton.addEventListener("click",function(){
 		if (navOpen == false){
-			navBar.style.top = "89px";
+			navBar.style.top = "94px";
 			this.classList.add('open')
 			navOpen = true;
 		} else {

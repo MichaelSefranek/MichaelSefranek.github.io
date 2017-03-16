@@ -178,6 +178,9 @@ h1{
 
 /*the actual nav bar style and its children*/
 .nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0;
     z-index: 1;
     padding: 14px 13px 14px 13px;
@@ -264,6 +267,7 @@ h1{
 }
 
 .sitelinks a{
+    font-size:18px;
     font-weight: 600;
     padding:0 7px 0 7px;
     text-decoration: none;
