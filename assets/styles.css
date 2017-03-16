@@ -115,36 +115,13 @@ h1{
     padding-right:100px;
 }
 
-/*all styling of the nav icon*/
-/*.hamburger {
-  position: relative;
-  padding-left: 1.25em;
-}
-
-.hamburger:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: 1.1em;
-  height: 0.13em;
-  background: white;
-  box-shadow: 
-    0 5px 0 0 white,
-    0 10px 0 0 white;
-}
-
-a.hamburger{
-    padding:0 0 0 18px;
-}*/
-
-/*new nav styling*/
+/* Icon 1 */
 
 #nav-icon1{
-  width: 60px;
-  height: 45px;
+  width: 30px;
+  height: 30px;
   position: relative;
-  margin: 50px auto;
+  margin: 10px auto;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -159,10 +136,10 @@ a.hamburger{
 #nav-icon1 span{
   display: block;
   position: absolute;
-  height: 7px;
+  height: 5px;
   width: 100%;
-  background: white;
-  border-radius: 2px;
+  background: black;
+  border-radius: 1px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
@@ -180,15 +157,16 @@ a.hamburger{
 }
 
 #nav-icon1 span:nth-child(2) {
-  top: 18px;
+  top: 10px;
+  
 }
 
 #nav-icon1 span:nth-child(3) {
-  top: 36px;
+  top: 20px;
 }
 
 #nav-icon1.open span:nth-child(1) {
-  top: 18px;
+  top: 10px;
   -webkit-transform: rotate(495deg);
   -moz-transform: rotate(495deg);
   -o-transform: rotate(495deg);
@@ -198,29 +176,16 @@ a.hamburger{
 #nav-icon1.open span:nth-child(2) {
   opacity: 0;
   width: 0;
+  margin: auto;
 }
 
 #nav-icon1.open span:nth-child(3) {
-  top: 18px;
+  top: 10px;
   -webkit-transform: rotate(-315deg);
   -moz-transform: rotate(-315deg);
   -o-transform: rotate(-315deg);
   transform: rotate(-315deg);
 }
-
-.nav_container{
-
-    align-content:center;
-    padding:3.5px 10px 3.5px 10px;
-}
-
-.nav_container:hover{
-    cursor:pointer;
-    border-radius: 1px;
-    box-shadow:
-        0 0 2px 2px rgba(63,127,191,0.7),
-        0 0 0 4px rgba(63,127,191,0.3);
-    }
 
 /*the actual nav bar style and its children*/
 .nav{
