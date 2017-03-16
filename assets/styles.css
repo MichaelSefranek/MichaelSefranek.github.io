@@ -117,7 +117,7 @@ h1{
   width: 30px;
   height: 30px;
   position: relative;
-  margin: 10px auto;
+  margin: 10px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
