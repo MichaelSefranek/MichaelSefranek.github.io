@@ -5,6 +5,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family:'LEIXO';
+  src: url('LEIXO.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /*general styling class elements*/
 
 html{
@@ -68,10 +75,10 @@ h3{
 
 /*style and placement of the header and its children*/
 
-.header{
+#header{
     position: relative;
     z-index:2;
-    padding: 22px 14px 22px 14px;
+    padding: 14px 14px 14px 14px;
     background-color: #404040;
     color:white;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.05),
@@ -80,23 +87,25 @@ h3{
 }
 
 .namesake{
+  font-family:'LEIXO';
+  font-weight:400;
 }
 
 h1{
     padding:0 0 0 0;
     margin:0 0 0 0;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     text-align: left;
     letter-spacing:0.05em;
 }
 
-.header a{
+#header a{
     text-decoration: none;
     color: white;
 }
 
-.header p{
+#header p{
     padding: 0 0 0 0 ;
     font-size:13px;
     margin:0;
@@ -183,7 +192,7 @@ h1{
     align-items: center;
     margin: 0;
     z-index: 1;
-    padding: 14px 13px 14px 13px;
+    padding: 20.5px 13px 20.5px 13px;
     background-color:#f6eeee;
     box-sizing:border-box;
     width:100%;
@@ -196,9 +205,9 @@ h1{
 /*social media buttons styling*/
 .twitter_icon{
     font-family:"Social Circles";
-    font-size: 35px;
+    font-size: 50px;
     color:#0084b4;
-    align-self:center;
+    align-self: center;
 }
 
 .twitter_share{
@@ -224,8 +233,7 @@ h1{
     float: left;
     display:inline-block;
     font-family:'Social Circles';
-    font-size: 50px;
-    margin-top:8px;
+    font-size: 40px;
     padding-left:0px;
     letter-spacing: 0.2em;
     color:#cccccc;
@@ -314,15 +322,15 @@ h1{
 /*media query for changing when small*/
 @media (min-width: 768px)  {
     .hidewhenbig{
-        display:none;
+        visibility:hidden;
     }
-    .header{
+    #header{
         background-color: white;
     }
-    .header h1 a{
+    #header h1 a{
         color: #404040;
     }
-    .header p{
+    #header p{
         color: #404040;
     }
     #nav-icon1{
