@@ -1,11 +1,14 @@
 ---
 title:  "A Mac OS Environment: From the Top"
-image: "/assets/ocs.png"
-date:   2017-03-13 10:44:01 -0600
+image: "/assets/ocs_star.png"
 ---
-I don't know how unusual my perspective is, but I actually enjoy setting up and debugging my developer environment from scratch. Recently my 2010 Mac and it's carefully constructed environment kicked the bucket. As a result I am making this as a future reference to myself. Perhaps it may be useful to other coders or students.
+I don't know how unusual my perspective is, but I actually enjoy setting up and debugging my developer environment from scratch. Recently my 2010 Mac and it's carefully constructed environment kicked the bucket. As a result I am making this as a future reference to myself.
 
-I also wanted to make some notes on how everything ties together, and any mistakes that I made along the way. This is specifically for Mac OS environment, but could likely be adapted for other environments.
+I also wanted to make some notes on how everything ties together, and any mistakes that I made along the way.
+
+{:.note}
+_This is a a tutorial very specific to MacOS, but could be adapted for other environments. It is also specific to installing __Oh My Zsh__, __Ruby via Rbenv__, and __Postgresql__.  Skim through and make sure you want these elements, because this may not be the proper tool for you personally._
+{:.done}
 
 One of the first things I do on a brand new Mac is to open a terminal window and enter:<br>
 <code>$ defaults write com.apple.Finder AppleShowAllFiles YES</code> [^1]<br>
@@ -13,25 +16,23 @@ into the command line. It is helpful during this process to see where all folder
 
 Somewhere along the journey you will need a text editor. Personally I have chosen [Sublime Text 3](https://www.sublimetext.com/3), I have heard that [Atom](https://atom.io/) is also good, thought slightly slower.
 
-Next I want to install Oh My Zsh! You need to have a Unix-like system (macOS or Linux).
+Next I want to install Oh My Zsh! First we need to make sure that all of these are installed: __Zsh, git, and Curl _or_  wget__.
 
-[Install Oh my Zsh here](https://github.com/robbyrussell/oh-my-zsh#basic-installation).
+__Zsh__ should be installed on Mac by default.  My new MacBook has come with Zsh 5.2.[^n] If you don't for some reason, you can install it [here](github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH).
 
-Notice the Github page says you need all of these: Zsh, git, and Curl _or_  wget.
+__Curl__ is another tool which should already be installed on a mac. It basically grabs or sends data to/from a server (using one of many data protocols).
 
-Zsh should be installed on Mac by default.  My new MacBook has come with Zsh 5.2.[^n] If you don't for some reason, you can install it [here](github.com/robbyrussell/oh-my-zsh/wiki/Installing-ZSH).
-
-I installed Oh My Zsh! using the provided Curl link.  Curl is another tool which should already be installed on a mac. It basically grabs or sends data to/from a server (using one of many data protocols).
+__Git__ on MacOS was not installed by default on mine. If you type in <code>$ git --version</code> you may be prompted to install Xcode developer tools on Mac. I selected "install". It may be a good idea to make sure your OS doesn't have any pending updates before doing this. After this installs, you can confirm git has been installed with another <code>$ git --version</code>
 
 {:.note}
 __Note:__ _If you are ever unsure about a component of your install you can always type_ <br>
 <code>$&lt;component&gt; -v</code>... _or in this specific case_ <code>$ curl --version</code>.<br>
 <br>
-__Note:__ _If you are ever unsure about __where__ a component is installed, you can try typing_ <br>
+ _If you are ever unsure about __where__ a component is installed, you can try typing_ <br>
  <code>$ which &lt;component&gt;</code>
 {:.done}
 
-Git on a mac may not be installed by default, and if you type in <code>$ git --version</code> you may be prompted to install Xcode developer tools on Mac. I selected "install". It may be a good idea to make sure your OS doesn't have any pending updates before doing this. After this installs, you can confirm git has been installed with another <code>$ git --version</code>
+[Install Oh my Zsh here](https://github.com/robbyrussell/oh-my-zsh#basic-installation).
 
 As it states on Robby Russel's site, the next step is: <br>
 
@@ -39,12 +40,12 @@ As it states on Robby Russel's site, the next step is: <br>
 
 Time to admit mistakes! At this point I tried to skip a step in my procedure. Namely: I wanted to open files with a handy shortcut that allows me to type <code>$ subl &lt;any_file&gt;</code> to open it in sublime text. The problem is that I needed to make a symbolic link between the subl executable file, and typing "subl" in the console.  Simple right?
 
-The problem is that this required me to make a symbolic link to usr/local/bin, and I missed an essential step, to install Homebrew.
+The problem is that I was copy pasting a command that required me to make a symbolic link in usr/local/bin, and I missed an essential step, to install Homebrew, which heavily affects interaction with this directory.
 
-Homebrew basically makes life easier for installation of packages, so that they can be installed in their own directory, and then symbolically linked into /usr/local. My previous step was dependant on this step for sure.
+Homebrew basically makes life easier for installation of packages, so that they can be installed in their own directory, and then symbolically linked into /usr/local. My previous step must have been dependant on this, because Mac threw out a complaint that I didn't have permission.  After installing Homebrew it was Easy Peazy.
 
 Homebrew can be installed [here](htpps://homebrew.sh).
-If you are on Linux and trying to mimic this setup you will have to look at Linux brew, since Homebrew is MacOS specific.
+If you are on Linux and trying to mimic this setup you will have to look at Linux brew, since Homebrew is MacOS specific, however there may be other better options for Linux.
 
 After Homebrew is installed you should be able to make the shortcut to Sublime Text:
 

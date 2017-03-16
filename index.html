@@ -8,11 +8,11 @@ layout: default
 
 
 {% for post in site.posts %}
-  <div class="gutter">
+  <div class="gutter clearfix">
     <small class="fade date">{{ post.date | date: "%b %-d, %Y" }}</small>
     <br>
     {% if {{post.image}} != null%}
-        <img class="small_image" src={{post.image}}>
+        <img class="small_image f_left" src={{post.image}}>
     {%endif%}
 
     <h2>

@@ -1,5 +1,6 @@
 ---
 title:  "On the Subject of Floats"
+image: "/assets/float.jpg"
 ---
 
 One of the more curious features of arranging elements through CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS.  
