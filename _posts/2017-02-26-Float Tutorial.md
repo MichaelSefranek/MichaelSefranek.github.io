@@ -3,16 +3,28 @@ title:  "On the Subject of Floats"
 image: "/assets/float.jpg"
 ---
 
-One of the more curious features of arranging elements through CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS.  
+Floats are one of the more curious style features that we use as developers in CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS. ___Float___ seems a little bit magical, doesn't it?
 
 As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using. With a name like float we can be left wondering how should I plan to use this tool?
 
 A float is a display style, specifically to create a "wrapping" effect like you see in newspaper or magazine articles.  Let's start with an example. Say I have a block of text inside p tags.
 
-Now to experiment, let me make a new div, give it some dimensions and a background color, and give it float left. Our html and css looks like this:
+Now to experiment, let me make a new div, give it some dimensions and a background color, and give it float left. Our div looks like this:
+
+
+<div style="height:30px;width:30px;background-color:blue;float:left;"></div>
+
+
+
+ Wait how did this text get here! What's this about?
+
+
+
+Well regardless... Our Code looks like this:
+
 
 {% highlight html %}
-<div class = "little blue"></div>
+<div class = "little blue f_left"></div>
 {% endhighlight %}
 
 And our CSS:
@@ -25,14 +37,51 @@ And our CSS:
 .blue {
 	background-color:blue;
 }
+.f_left {
+	
+}
 {% endhighlight %}
 
+So what exactly did float do?  _What did we expect it to do?_  Here is an interesting tool you can experiment with.  In many browsers you can access developer tools and right click on any element on a webpage. At this time feel free to __right click on the blue square__ .  In chrome, there should be a box that looks like this:
 
-So what exactly did float do?  What did we expect it to do?  Well clearly this is not the way float has any effect.  Let's try putting our float div above our paragraph in our HTML:
+![css box](/assets/stylebox.png)
 
-insert picture.
 
-Now we can see that our float clearly functions.  But the question is what exactly is the float doing?  Normally our paragraph is a block level element, which interrupts the page flow by taking up all the space it can.  Normally our div is a block level element, and these stack on each other.  What float essentially does is to kill the height of it's parent element, and allows the text to wrap around the floated element.
+You can see all the CSS styling applied to it, and you can _check_ and _uncheck_ elements.  __Play around with it!__ 
+If you check and uncheck , you can see that float is having an interesting effect.  Normally our blue div would be a ___block___ level element.  Block level elements basically take up the width of the entire container they are in.  A floated element is ___changing___ the behavior of the other elements around it.
+
+__Let's illustrate this some more.__  
+
+Now I want to put a small thin border around this box. So I make a new div with some border styling.
+My added code looks like this: 
+{% highlight html%}
+<div class = "little blue f_left">
+	<div class = "black_border">
+	</div>
+</div>
+{% endhighlight%}
+
+{% highlight css %}
+
+.black_border {
+	border: 1px solid black;
+	width: 100%;
+	padding: 5px;
+}
+	
+{% endhighlight %}
+
+<div style="border: 1px solid black;width:100%; padding:5px">
+	<div style="height:30px;width:30px;background-color:blue;float:left;"></div>
+</div>
+
+Now what is happening?  Floats seemed simple, but now this is totally wacky, right?  Normally our paragraph is a block level element, which interrupts the page flow by taking up all the space it can. What float essentially does is to kill the height of it's parent element!
+
+Kill the height? Let me rephrase: __At the point a floated element is introduced, it kills the _height_ property of it's parent, or container. This allows all other items to "float" upwards and fill the space around it.
+
+![css box](/assets/floatkid.jpg){: .center-image }
+
+
 
 So we have our floated element.  Let's increase our height on our floated element so it extends below the text of the paragraph like this:
 

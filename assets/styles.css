@@ -401,6 +401,10 @@ p{
     opacity:0.6;
 }
 
+.center-image {
+  margin:auto;
+}
+
 .article_img{
     width: 100%;
     box-sizing: border-box;
