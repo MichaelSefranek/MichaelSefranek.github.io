@@ -71,27 +71,67 @@ My added code looks like this:
 	
 {% endhighlight %}
 
-<div style="border: 1px solid black;width:100%; padding:5px">
+<div style="border: 1px solid black;width:100%; padding:5px; margin:10px">
 	<div style="height:30px;width:30px;background-color:blue;float:left;"></div>
 </div>
 
-Now what is happening?  Floats seemed simple, but now this is totally wacky, right?  Normally our paragraph is a block level element, which interrupts the page flow by taking up all the space it can. What float essentially does is to kill the height of it's parent element!
+Now what is happening? This is wacky, right?<br><br>
+Normally our blue div and it's thin bordered parent is a block level element.  Block level elements take up all the space it can, stretching across the page. What float essentially does is to kill the height of it's parent element!
 
-Kill the height? Let me rephrase: __At the point a floated element is introduced, it kills the _height_ property of it's parent, or container. This allows all other items to "float" upwards and fill the space around it.__
+Kill the height? Let me be specific: __At the point a floated element is introduced, it kills the _height_ property of it's parent, or container. This allows all other items to "float" upwards and fill the space around it.__
+
+Easy right?  Let's fix it.  We could try this by defining a height of 40px maybe?  But see the problem?
+
+<div style="border: 1px solid black;width:100%; height:30px; padding:20px; margin:10px" >
+	<div style="height:30px;width:30px;background-color:blue;float:left;">
+	</div>
+			<p style="font-size:8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<br>
+
+As a web-developer, it is bad form to define height on elements.  If I am trying to re-use this parent container across a template, the content of one article is not equal to the content of other articles, and this situation __above__ will happen.
+
+So this is where __clearing floats__ comes into play.  Clearing floats is essentially a hack to re-initialize the height of an element. So we add 
+<code>clear:left</code>
+ to our stylesheet.
+
+<div style="border: 1px solid black;width:100%; clear:left; padding:20px; margin:10px">
+	<div style="height:30px;width:30px;background-color:blue;float:left;">
+	</div>
+			<p style="font-size:8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<br>
+
+
+How does this magic work?  Essentially it is ___magic___.  No really, if you insist.  Let's look at one other example.
+
+<div style="border: 1px solid black;width:30%; clear:both; padding:20px; margin:10px">
+	<div style="height:30px;width:30px;background-color:blue;float:left; margin:10px;">
+	</div>
+	<div style="height:30px;width:30px;background-color:blue;float:right; margin:10px;">
+	</div>
+	<div style="height:30px;width:30px;background-color:blue; margin:10px;">
+	</div>
+</div>
+<br>
 
 ![css box](/assets/floatkid.jpg){: .center-image }
 
 
 
-So we have our floated element.  Let's increase our height on our floated element so it extends below the text of the paragraph like this:
+Not so fast.  Let's imagine we have our article with a picture, and now we want a new paragraph.
 
-insert pic
-
-our html and css look like this:
-
-<code>
-	insert code
-</code>
+Lets do it like this: 
 
 Now say we are creating a website, and this was an article with a related picture, and you are now ready to display new article text below it.  Well this is what happenes when we add an identical paragraph below it.
 

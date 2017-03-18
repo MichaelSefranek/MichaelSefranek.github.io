@@ -100,6 +100,15 @@ h1{
     letter-spacing:0.05em;
 }
 
+h2{
+    margin-top:10px;
+    margin-bottom:10px;
+    font-size:22px;
+    font-weight:600;
+    color:#404040;
+    letter-spacing: -0.03em;
+}
+
 #header a{
     text-decoration: none;
     color: white;
@@ -348,6 +357,9 @@ h1{
       width: 150px;
       margin: 24px 24px 24px 0;
     }
+    h2{
+      font-size:28px;
+    }
 
 }
 
@@ -369,15 +381,6 @@ hr{
     margin-top:25px;
     font-size:14px;
     font-weight: 400;
-}
-
-h2{
-    margin-top:10px;
-    margin-bottom:10px;
-    font-size:28px;
-    font-weight:600;
-    color:#404040;
-    letter-spacing: -0.03em;
 }
 
 p{
@@ -441,13 +444,13 @@ p{
 
 .highlight {
   padding: 5px 10px 5px 10px;
-  background-color: #004d39;
+  background-color: #E5FFF6;
 }
 
 code{
-  color: white;
-  font-weight: 900;
-  font-size: 17px;
+  color: black;
+  font-weight: 700;
+  font-size: 16px;
 }
 
 ul {
