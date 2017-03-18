@@ -3,13 +3,13 @@ title:  "On the Subject of Floats"
 image: "/assets/float.jpg"
 ---
 
-Floats are one of the more curious style features that we use as developers in CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS. ___Float___ seems a little bit magical, doesn't it?
+Floats are one of the more style elements that we use as developers in CSS.  Part of the mystery behind this display style may have something to do with it's name, especially if you are fairly new to developing in HTML and CSS. ___Float___ seems ambiguous if no a little bit _magical_, doesn't it?
 
-As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using. With a name like float we can be left wondering how should I plan to use this tool?
+As developers we tend to try things, and stick with what works, sometimes forgetting the actual _meaning_ and mechanics behind the tools we are using.
 
-A float is a display style, specifically to create a "wrapping" effect like you see in newspaper or magazine articles.  Let's start with an example. Say I have a block of text inside p tags.
+A float is a display style, specifically to create a "wrapping" effect like you see in newspaper or magazine articles.  The best way is to illustrate with examples:
 
-Now to experiment, let me make a new div, give it some dimensions and a background color, and give it float left. Our div looks like this:
+Lets make a new div, give it some dimensions and a background color, and give it float left. Our div looks like this:
 
 
 <div style="height:30px;width:30px;background-color:blue;float:left;"></div>
@@ -20,7 +20,7 @@ Now to experiment, let me make a new div, give it some dimensions and a backgrou
 
 
 
-Well regardless... Our Code looks like this:
+This must have something to do with our float... Our Code looks like this:
 
 
 {% highlight html %}
@@ -71,7 +71,7 @@ My added code looks like this:
 	
 {% endhighlight %}
 
-<div style="border: 1px solid black;width:100%; padding:5px; margin:10px">
+<div style="border: 1px solid black;width:300px; padding:5px; margin:10px">
 	<div style="height:30px;width:30px;background-color:blue;float:left;"></div>
 </div>
 
@@ -82,7 +82,7 @@ Kill the height? Let me be specific: __At the point a floated element is introdu
 
 Easy right?  Let's fix it.  We could try this by defining a height of 40px maybe?  But see the problem?
 
-<div style="border: 1px solid black;width:100%; height:30px; padding:20px; margin:10px" >
+<div style="border: 1px solid black;width:300px; height:30px; padding:20px; margin:10px" >
 	<div style="height:30px;width:30px;background-color:blue;float:left;">
 	</div>
 			<p style="font-size:8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -92,7 +92,7 @@ Easy right?  Let's fix it.  We could try this by defining a height of 40px maybe
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 </div>
-<br>
+<br><br><br>
 
 As a web-developer, it is bad form to define height on elements.  If I am trying to re-use this parent container across a template, the content of one article is not equal to the content of other articles, and this situation __above__ will happen.
 
@@ -100,7 +100,7 @@ So this is where __clearing floats__ comes into play.  Clearing floats is essent
 <code>clear:left</code>
  to our stylesheet.
 
-<div style="border: 1px solid black;width:100%; clear:left; padding:20px; margin:10px">
+<div style="border: 1px solid black;width:300px; clear:left; padding:20px; margin:10px">
 	<div style="height:30px;width:30px;background-color:blue;float:left;">
 	</div>
 			<p style="font-size:8px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -113,43 +113,44 @@ So this is where __clearing floats__ comes into play.  Clearing floats is essent
 <br>
 
 
-How does this magic work?  Essentially it is ___magic___.  No really, if you insist.  Let's look at one other example.
+How does this magic work?  Essentially it is ___magic___.  What? Not satisfied with that answer?  Let's look at one other example.
 
-<div style="border: 1px solid black;width:30%; clear:both; padding:20px; margin:10px">
-	<div style="height:30px;width:30px;background-color:blue;float:left; margin:10px;">
+<div style="border: 1px solid black;width:30%; padding:20px; margin:10px">
+	<div style="height:50px;width:50px;background-color:red;float:left; margin:10px;">
 	</div>
-	<div style="height:30px;width:30px;background-color:blue;float:right; margin:10px;">
+	<div style="height:20px;width:120px;background-color:blue;float:right; margin:10px;">
 	</div>
-	<div style="height:30px;width:30px;background-color:blue; margin:10px;">
-	</div>
+	<p>some text some text</p>
 </div>
 <br>
+
+Here we have a red div with __float:left__ and a blue dive with __float:right__ , and some text.  The text is rising up because it has not cleared the floated elements.
+
+Applying __clear:both__ will have our "some text" start below the end of both divs, instead of wandering upwards.
+
+<div style="border: 1px solid black;width:30%; padding:20px; margin:10px">
+	<div style="height:50px;width:50px;background-color:red;float:left; margin:10px;">
+	</div>
+	<div style="height:20px;width:120px;background-color:blue;float:right; margin:10px;">
+	</div>
+	<p style= "clear:both">some text some text</p>
+</div>
+<br>
+
+In closing: __Clearing a Float re-initializes the height that was "killed" by initiating the float.  Thus all the elements after the cleared item will behave with normal height properties again.__
+<br>
+
 
 ![css box](/assets/floatkid.jpg){: .center-image }
 
 
 
-Not so fast.  Let's imagine we have our article with a picture, and now we want a new paragraph.
+Hardly.  Floats, can cause unpredictable behavior when used unthinkingly.  Still, they fill a much needed gap in providing a text-wrapping effect for some really dynamic looking content. 
 
-Lets do it like this: 
 
-Now say we are creating a website, and this was an article with a related picture, and you are now ready to display new article text below it.  Well this is what happenes when we add an identical paragraph below it.
+There is one additional common method to clearing floats:
 
-insert pic
-
-The new text is still weaving around the picture.  The companion to floating elements that fixes this problem is called "clearing" the float.  There are different methods of clearing a float, and I will cover two of the most basic ways.
-
-The first is to make a div element with styling like this:
-
-<code>
-	div {
-    	clear: left;
-	}
-</code>
-
-and place the div element below our float.  What exactly does this do? Well in our floated element, we essentially killed the height of the parent element, so all future block elements try to stack as high as they can.  Clearing the float _reinitializes_ the height of the parent element.  This allows content below the clear item to be displayed normally again.
-
-The other example which is more complex is to create a css styling called clearfix.  It is essentially a little "hack", and we don't have to get too deep into understanding how it works, but it does.  Adding this to your CSS code :
+The other method which is more complex is to create a css styling called clearfix.  We don't have to get too deep into understanding how it works, but it does.  Adding this to your CSS code :
 
 <code>
 	.clearfix::after {
@@ -159,5 +160,11 @@ The other example which is more complex is to create a css styling called clearf
 	}
 </code>
 
-Then we add this class "clearfix" to any parent element, or any element with floated children.  This will essentially clear the floated element immediately afterwards without the need for creating extra elements.
+Then we add this class __"clearfix"__ to any parent element, or any element with floated children.  This will essentially clear the floated element immediately afterwards without the need for creating extra elements.  Many developers in blog entries complain about CSS _clutter_, and this is many people's preferred method.  Making sure code is _legible_ and _semantic_ is one of the most important features of development, and this is one way to accomplish that.
+
+In closing, there is nothing better than more examples for anyone with a persisting thirst for understanding.  Below I include a snippet from a great website called __CodePen__. This particular tool is an excellent demonstration. I highly recommend playing with it to understand multiple floated objects.
+
+[CLICK HERE to try the CODEPEN FLOAT demo](https://codepen.io/sergelerner/full/jEWmbE/){:.plainlink}
+
+Thank you, and happy coding!
 

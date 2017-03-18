@@ -439,12 +439,16 @@ p{
 
 .note{
     padding:20px 10px 20px 10px;
-    background-color:#E5FFF6;
+    background-color:#6fa7fc;
+    border-radius:2px;
+    box-shadow: 2px 4px 4px black;
 }
 
 .highlight {
   padding: 5px 10px 5px 10px;
-  background-color: #E5FFF6;
+  background-color: #6fa7fc;
+  border-radius:2px;
+  box-shadow: 2px 4px 4px black;
 }
 
 code{
