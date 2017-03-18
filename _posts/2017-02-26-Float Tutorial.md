@@ -77,7 +77,7 @@ My added code looks like this:
 
 Now what is happening?  Floats seemed simple, but now this is totally wacky, right?  Normally our paragraph is a block level element, which interrupts the page flow by taking up all the space it can. What float essentially does is to kill the height of it's parent element!
 
-Kill the height? Let me rephrase: __At the point a floated element is introduced, it kills the _height_ property of it's parent, or container. This allows all other items to "float" upwards and fill the space around it.
+Kill the height? Let me rephrase: __At the point a floated element is introduced, it kills the _height_ property of it's parent, or container. This allows all other items to "float" upwards and fill the space around it.__
 
 ![css box](/assets/floatkid.jpg){: .center-image }
 

@@ -79,7 +79,7 @@ h3{
     position: relative;
     z-index:2;
     padding: 14px 14px 14px 14px;
-    background-color: #404040;
+    background-color: #0a5adb;
     color:white;
     box-shadow: 2px 2px 5px rgba(0,0,0,0.05),
                 2px 2px 3px rgba(0,0,0,0.07),
@@ -134,7 +134,7 @@ h1{
 #nav-icon1 span{
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: white;
   border-radius: 1px;
@@ -193,7 +193,7 @@ h1{
     margin: 0;
     z-index: 1;
     padding: 20.5px 13px 20.5px 13px;
-    background-color:#f6eeee;
+    background-color:#172842;
     box-sizing:border-box;
     width:100%;
     position:absolute;
@@ -275,7 +275,8 @@ h1{
 }
 
 .sitelinks a{
-    font-size:18px;
+    font-family: 'LEIXO';
+    font-size:22px;
     font-weight: 600;
     padding:0 7px 0 7px;
     text-decoration: none;
@@ -283,7 +284,7 @@ h1{
 }
 .sitelinks a:hover{
     cursor:pointer;
-    color:#00e699;
+    color:white;
 }
 
 .plainlink{
@@ -317,6 +318,7 @@ h1{
 .small_image {
   width: 50px;
   margin: 8px 8px 8px 0;
+  vertical-align: center;
 }
 
 /*media query for changing when small*/
@@ -437,8 +439,15 @@ p{
     background-color:#E5FFF6;
 }
 
+.highlight {
+  padding: 5px 10px 5px 10px;
+  background-color: #004d39;
+}
+
 code{
-    background-color:#e6e6e6;
+  color: white;
+  font-weight: 900;
+  font-size: 17px;
 }
 
 ul {
