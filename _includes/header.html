@@ -1,21 +1,20 @@
 <div id="header" class="flex-between">
 
-<div>
-  <h1 class="namesake"><a href="/index.html">micHaEl SEfRAnEK</a></h1>
-  <p class="subtitle namesake">Ideas from another dimension</p>  
+<div id="title" class="centerwhenbig">
+  <h1 class="namesake"><a href="/index.html">michael sefranek</a></h1>
+  <p class="subtitle namesake ctextifbig">Ideas from another dimension</p>  
 </div>
 
-
-
-  <div id="nav-icon1" class="hidewhenbig">
+  <div id="nav-icon1" class="dnoneifbig">
     <span></span>
     <span></span>
     <span></span>
   </div>
+
 </div>
 
-<div class="hidden clear">
-  <div id="nav-container" class="nav hidewhenbig">
+<div class="overflow_hidden clear">
+  <div id="nav-container" class="nav">
     <div class="little skew"></div>
     <div class="little skew"></div>
     <div class="little skew"></div>
@@ -35,7 +34,7 @@
       <div class="sitelinks unskew">
           {% for the_page in site.pages %}
             {% if the_page.title %}
-            <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>
+            <span><a href="{{ the_page.url }}">{{ the_page.title }}</a></span>
             {% endif %}
           {% endfor %}
       </div>

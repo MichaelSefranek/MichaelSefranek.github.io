@@ -20,8 +20,8 @@ html{
 }
 
 body{
-    margin: 0;
-    padding: 0;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
 
 .clear{
@@ -199,7 +199,7 @@ h2{
 }
 
 /*the nav bar style and its children*/
-.hidden{
+.overflow_hidden{
   overflow:hidden;
   position: relative;
   width: 100%;
@@ -247,24 +247,6 @@ h2{
   background-color:white;
 }
 
-/*
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    z-index: 1;
-    padding: 20.5px 13px 20.5px 13px;
-    background-color:#172842;
-    box-sizing:border-box;
-    width:100%;
-    position:absolute;
-    top:0px;
-    -webkit-transition: top 0.2s; /*Safari
-    transition: top 0.2s;
-}
-*/
-
 
 /*social media buttons styling*/
 .twitter_icon{
@@ -301,6 +283,10 @@ h2{
     padding-left:0px;
     letter-spacing: 0.2em;
     color:#cccccc;
+    text-shadow: 1px 1px 1px white,
+       -1px -1px 1px white,
+       1px -1px 1px white,
+       -1px 1px 1px white;
 
 }
 
@@ -310,14 +296,26 @@ h2{
 
 .s--github:hover{
     color:black;
+        text-shadow: 1px 1px 1px #93bcff,
+               -1px -1px 1px #93bcff,
+               1px -1px 1px #93bcff,
+               -1px 1px 1px #93bcff;
 }
 
 .s--rss:hover{
     color:#FF6600;
+        text-shadow: 1px 1px 1px #93bcff,
+               -1px -1px 1px #93bcff,
+               1px -1px 1px #93bcff,
+               -1px 1px 1px #93bcff;
 }
 
 .s--twitter:hover{
     color:#0084b4;
+    text-shadow: 1px 1px 1px #93bcff,
+               -1px -1px 1px #93bcff,
+               1px -1px 1px #93bcff,
+               -1px 1px 1px #93bcff;
 }
 /*hero image*/
 .hero{
@@ -344,11 +342,19 @@ h2{
     font-weight: 600;
     padding:0 7px 0 7px;
     text-decoration: none;
-    color:#2F4F4F;
+    color:black;
+    text-shadow: 1px 1px 1px white,
+       -1px -1px 1px white,
+       1px -1px 1px white,
+       -1px 1px 1px white;
 }
 .sitelinks a:hover{
     cursor:pointer;
     color:red;
+    text-shadow: 2px 2px 3px white,
+       -2px -2px 3px white,
+       2px -2px 3px white,
+       -2px 2px 3px white;
 }
 
 .plainlink{
@@ -387,18 +393,16 @@ h2{
 
 /*media query for changing when small*/
 @media (min-width: 768px)  {
+    .dnoneifbig{
+      display:none;
+    }
     .hidewhenbig{
-        visibility:hidden;
+      visibility:hidden;
     }
-    #header{
-        background-color: white;
-    }
-    #header h1 a{
-        color: #404040;
-    }
-    #header p{
-        color: #404040;
-    }
+/*    #nav-icon1{
+      position:relative;
+      top:-1000px;
+    }*/
     .hidewhensmall{
         display:block;
     }
@@ -412,6 +416,63 @@ h2{
     h2{
       font-size:28px;
     }
+    .centerwhenbig{
+      margin: auto;
+    }
+    .ctextifbig{
+      text-align:center;
+    }
+    #header{
+      position: absolute; 
+      left: 0; 
+      right: 0; 
+      margin-left: auto; 
+      margin-right: auto; 
+      width: 400px;
+      background:none;
+      box-shadow:none;
+    }
+
+    #title a{
+      color:black;
+      text-shadow: 2px 2px 3px white,
+                 -2px -2px 3px white,
+                 2px -2px 3px white,
+                 -2px 2px 3px white;
+      font-size: 35px;
+    }
+    #title p{
+      color:black;
+      opacity:3;
+      text-shadow: 2px 2px 3px white,
+                 -2px -2px 3px white,
+                 2px -2px 3px white,
+                 -2px 2px 3px white;
+      font-size:18px;
+
+    }
+    #nav-container{
+      margin-left: 50%;
+      transform: translateX(-50%);
+      left:0px !important;
+      width:100%;
+    }
+    .little{
+      z-index:-1;
+    }
+    .soclinks{
+      position:absolute;
+      left:-185px;
+    }
+    .soclinks a{
+      font-size:60px;
+      color:black;
+    }
+    .sitelinks{
+      position:absolute;
+      right:-215px;
+    }
+}
 
 }
 
