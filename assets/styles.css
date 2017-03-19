@@ -296,26 +296,26 @@ h2{
 
 .s--github:hover{
     color:black;
-        text-shadow: 1px 1px 1px #93bcff,
-               -1px -1px 1px #93bcff,
-               1px -1px 1px #93bcff,
-               -1px 1px 1px #93bcff;
+        text-shadow: 2px 2px 2px white,
+               -2px -2px 2px white,
+               2px -2px 2px white,
+               -2px 2px 2px #93bcff;
 }
 
 .s--rss:hover{
     color:#FF6600;
-        text-shadow: 1px 1px 1px #93bcff,
-               -1px -1px 1px #93bcff,
-               1px -1px 1px #93bcff,
-               -1px 1px 1px #93bcff;
+        text-shadow: 2px 2px 2px white,
+               -2px -2px 2px white,
+               2px -2px 2px white,
+               -2px 2px 2px #93bcff;
 }
 
 .s--twitter:hover{
     color:#0084b4;
-    text-shadow: 1px 1px 1px #93bcff,
-               -1px -1px 1px #93bcff,
-               1px -1px 1px #93bcff,
-               -1px 1px 1px #93bcff;
+    text-shadow: 2px 2px 2px white,
+               -2px -2px 2px white,
+               2px -2px 2px white,
+               -2px 2px 2px #93bcff;
 }
 /*hero image*/
 .hero{
