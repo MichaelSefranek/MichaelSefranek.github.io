@@ -42,7 +42,7 @@ And our CSS:
 }
 {% endhighlight %}
 
-So what exactly did float do?  _What did we expect it to do?_  Here is an interesting tool you can experiment with.  In many browsers you can access developer tools and right click on any element on a webpage. At this time feel free to __right click on the blue square__ .  In chrome, there should be a box that looks like this:
+So what exactly did float do?  _What did we expect it to do?_  Here is an interesting tool you can experiment with.  In many browsers you can access developer tools and right click on any element on a webpage. At this time feel free to __right click on the blue square and select "inspect"__ .  In chrome, there should be a box that looks like this:
 
 ![css box](/assets/stylebox.png)
 
@@ -115,7 +115,7 @@ So this is where __clearing floats__ comes into play.  Clearing floats is essent
 
 How does this magic work?  Essentially it is ___magic___.  What? Not satisfied with that answer?  Let's look at one other example.
 
-<div style="border: 1px solid black;width:30%; padding:20px; margin:10px">
+<div style="border: 1px solid black;width:250px; padding:20px; margin:10px">
 	<div style="height:50px;width:50px;background-color:red;float:left; margin:10px;">
 	</div>
 	<div style="height:20px;width:120px;background-color:blue;float:right; margin:10px;">
@@ -128,7 +128,7 @@ Here we have a red div with __float:left__ and a blue dive with __float:right__ 
 
 Applying __clear:both__ will have our "some text" start below the end of both divs, instead of wandering upwards.
 
-<div style="border: 1px solid black;width:30%; padding:20px; margin:10px">
+<div style="border: 1px solid black;width:250px; padding:20px; margin:10px">
 	<div style="height:50px;width:50px;background-color:red;float:left; margin:10px;">
 	</div>
 	<div style="height:20px;width:120px;background-color:blue;float:right; margin:10px;">
@@ -137,7 +137,9 @@ Applying __clear:both__ will have our "some text" start below the end of both di
 </div>
 <br>
 
-In closing: __Clearing a Float re-initializes the height that was "killed" by initiating the float.  Thus all the elements after the cleared item will behave with normal height properties again.__
+In closing:<br>
+ __Clearing a Float re-initializes the height that was "killed" by initiating the float.  Thus all the elements after the cleared item will behave with normal height properties again.__
+<br>
 <br>
 
 
@@ -160,7 +162,7 @@ The other method which is more complex is to create a css styling called clearfi
 	}
 </code>
 
-Then we add this class __"clearfix"__ to any parent element, or any element with floated children.  This will essentially clear the floated element immediately afterwards without the need for creating extra elements.  Many developers in blog entries complain about CSS _clutter_, and this is many people's preferred method.  Making sure code is _legible_ and _semantic_ is one of the most important features of development, and this is one way to accomplish that.
+Then we add this class __"clearfix"__ to any parent element, or any element with floated children.  This will remove the need to clear for each individual child of the parent with __clearfix__ applied.  Sound confusing? I recommed researching it further and trying yourself.  Many developers in blog entries complain about CSS _clutter_, and this is many people's preferred method.  Making sure code is _legible_ and _semantic_ is one of the most important features of development, and this is one way to accomplish that.
 
 In closing, there is nothing better than more examples for anyone with a persisting thirst for understanding.  Below I include a snippet from a great website called __CodePen__. This particular tool is an excellent demonstration. I highly recommend playing with it to understand multiple floated objects.
 

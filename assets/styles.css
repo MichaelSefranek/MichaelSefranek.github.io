@@ -357,21 +357,21 @@ h2{
 }
 
 .plainlink:hover{
-    color:#0c69ff;
+    color:red;
 }
 
 .sitelink a{
     text-decoration:underline;
 }
 .sitelink a:hover{
-    color:#0c69ff;
+    color:red;
 }
 
 .sitelink a:visited{
     color:#404040;
 }
 .sitelink a:visited:hover{
-    color:#00e699;
+    color:red;
 }
 
 .articlelink{
@@ -398,9 +398,6 @@ h2{
     }
     #header p{
         color: #404040;
-    }
-    #nav-icon1{
-        visibility:hidden;
     }
     .hidewhensmall{
         display:block;
@@ -483,7 +480,7 @@ p{
     color:black;
 }
 .article_img a:hover{
-    color: #00e699;
+    color: red;
     cursor: pointer;
 }
 
