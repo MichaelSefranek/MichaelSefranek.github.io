@@ -14,21 +14,44 @@
   </div>
 </div>
 
-<div id="navbar" class="nav hidewhenbig">
+<div class="hidden clear">
+  <div id="nav-container" class="nav hidewhenbig">
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
 
-  <div class="soclinks">
-    <a href="https://twitter.com/MalastrumDomini?lang=en" class="s--twitter">T</a>
-    <a href="https://github.com/MalastrumDominiSui" class="s--github">)</a>
-    <a href="https://www.linkedin.com/in/michaelsefranek/" class="s--rss">L</a>
-  </div>
+    <div class="big skew">
+      <div class="soclinks unskew">
+        <a href="https://twitter.com/MalastrumDomini?lang=en" class="s--twitter">T</a>
+        <a href="https://github.com/MalastrumDominiSui" class="s--github">)</a>
+        <a href="https://www.linkedin.com/in/michaelsefranek/" class="s--rss">L</a>
+      </div>
 
-  <div class="sitelinks">
-      {% for the_page in site.pages %}
-        {% if the_page.title %}
-        <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>
-        {% endif %}
-      {% endfor %}
+      <div class="sitelinks unskew">
+          {% for the_page in site.pages %}
+            {% if the_page.title %}
+            <span><a class="caps" href="{{ the_page.url }}">{{ the_page.title }}</a></span>
+            {% endif %}
+          {% endfor %}
+      </div>
+    </div>
+    
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
+    <div class="little skew"></div>
   </div>
 </div>
+
+ 
 
 <div class="hero"></div>
