@@ -72,11 +72,6 @@ body{
     align-content:center;
 }
 
-h3{
-    font-size:19px;
-    font-weight: 500;
-}
-
 /*style and placement of the header and its children*/
 
 #header{
@@ -96,21 +91,33 @@ h3{
 }
 
 h1{
+    font-family:'LEIXO';
+    font-weight:400;
+    text-transform:lowercase;
     padding:0 0 0 0;
     margin:0 0 0 0;
     font-size: 30px;
-    font-weight: 600;
     text-align: left;
-    letter-spacing:0.05em;
+    letter-spacing:0.01em;
 }
 
 h2{
+    font-family:'LEIXO';
+    font-weight:400;
+    text-transform:lowercase;
     margin-top:10px;
     margin-bottom:10px;
     font-size:22px;
-    font-weight:600;
     color:#404040;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.05em;
+}
+
+h3{
+    font-family:'LEIXO';
+    font-weight:400;
+    text-transform:lowercase;
+    font-size:19px;
+    font-weight: 500;
 }
 
 #header a{
@@ -295,7 +302,7 @@ h2{
 }
 
 .s--github:hover{
-    color:black;
+    color:#404142;
         text-shadow: 2px 2px 2px white,
                -2px -2px 2px white,
                2px -2px 2px white,
@@ -339,7 +346,7 @@ h2{
 .sitelinks a{
     font-family: 'LEIXO';
     font-size:22px;
-    font-weight: 600;
+    font-weight: 400;
     padding:0 7px 0 7px;
     text-decoration: none;
     color:black;
