@@ -44,7 +44,7 @@ The problem is that I was copy pasting a command that required me to make a symb
 
 Homebrew basically makes life easier for installation of packages, so that they can be installed in their own directory, and then symbolically linked into /usr/local. My previous step must have been dependant on this, because Mac threw out a complaint that I didn't have permission.  After installing Homebrew it was Easy Peazy.
 
-Homebrew can be installed [here](htpps://homebrew.sh).
+Homebrew can be installed [here](https://brew.sh/).
 If you are on Linux and trying to mimic this setup you will have to look at Linux brew, since Homebrew is MacOS specific, however there may be other better options for Linux.
 
 After Homebrew is installed you should be able to make the shortcut to Sublime Text:
