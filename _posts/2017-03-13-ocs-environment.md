@@ -95,7 +95,10 @@ Which manually initializes the postgresql server, and allowed me to recreate the
 
 {:.note}
 __Other reminders:__<br>
-_-If using Sublime Text, Install sublime text package control._
+_-If using Sublime Text, Install sublime text package control._ <br>
+_-Make sure that you make Sublime Text your editor for Git, instead of the default VIM:_ <br>
+<code>git config --global core.editor "subl"</code>
+
 {:.done}
 
 [^1]: The "$" convention will be used here, whenever you see this character, it simply indicates a command to type in Terminal, not to actually type "$" itself.
