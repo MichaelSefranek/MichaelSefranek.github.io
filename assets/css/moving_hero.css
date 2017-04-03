@@ -89,45 +89,48 @@
     }  
 }
 #imageContainer1 img {
-  position: relative;
+  position: absolute;
   top: -150px;
   animation: pan1 30s infinite,
             first 30s infinite;
 }
 
 #imageContainer1 {
-    position: relative;
-    top: -80px;
+    position: absolute;
+    top: 0px;
     height: 300px;
+    width: 100%;
     overflow: hidden;   
 }
 
 #imageContainer2 img {
-  position: relative;
+  position: absolute;
   top: 0px;
   animation: pan2 30s infinite,
             second 30s infinite;
 }
 
 #imageContainer2 {
-    position: relative;
-    top: -380px;
+    position: absolute;
+    top: 0px;
     height: 300px;
+    width: 100%;
     overflow: hidden;
     animation: second 30s infinite; 
 } 
 
 
 #imageContainer3 img {
-  position: relative;
+  position: absolute;
   top: -150px;
   animation: pan3 30s infinite;
 }
 
 #imageContainer3 {
-    position: relative;
-    top: -680px;
+    position: absolute;
+    top:0px;
     height: 300px;
+    width:100%;
     overflow: hidden;
     animation: third 30s infinite;
 }
