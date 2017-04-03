@@ -130,8 +130,4 @@
     height: 300px;
     overflow: hidden;
     animation: third 30s infinite;
-} 
-
-html, body {
-  height: 100%;
 }

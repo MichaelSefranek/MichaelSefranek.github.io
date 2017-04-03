@@ -76,7 +76,6 @@ body{
 
 #header{
     position: relative;
-    z-index:2;
     padding: 14px 14px 14px 14px;
     background-color: #0a5adb;
     color:white;
@@ -214,6 +213,7 @@ h3{
 }
 
 #nav-container{
+  z-index:2;
   display:flex;
   justify-content:center;
   position: absolute;
@@ -423,6 +423,9 @@ h3{
     }
     .centerwhenbig{
       margin: auto;
+    }
+    .zwhenbig{
+      z-index:3;
     }
     .ctextifbig{
       text-align:center;
