@@ -37,7 +37,7 @@ body{
 }
 
 .content_container{
-    position: relative;
+    position:relative;
     top:200px;
     max-width:768px;
     margin:auto;
@@ -594,5 +594,9 @@ sup, sub {
 
 sub {
     top: 0.4em;
+}
+.topfix{
+  position:relative;
+  top:20px;
 }
 
