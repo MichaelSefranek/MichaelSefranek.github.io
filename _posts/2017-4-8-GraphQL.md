@@ -86,6 +86,9 @@ __Endpoints__ - A specific point in the API that allows the user to query the da
 
 <a href="http://facebook.github.io/graphql/">_The Facebook SPEC sheets for GraphQL, containing in depth coverage of everything_</a>
 
+<a href="GraphIQL User Interface Sandbox">http://graphql.org/swapi-graphql/</a>
+
+<a href="https://rmosolgo.github.io/graphql-ruby/">GraphQL server implementation for Ruby</a>
 
 
 
