@@ -4,6 +4,10 @@ html{
 	font-size: 16px;
 }
 
+.gutter{
+	padding:0 60px;
+}
+
 .group:after {
   content: "";
   display: table;
@@ -12,6 +16,9 @@ html{
 
 h1{
 	font-size:48px;
+}
+h2{
+	font-size:32px;
 }
 .v-align{
 	vertical-align:middle;
@@ -70,4 +77,41 @@ h1{
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
 }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    text-decoration:none;
+}
+
+li a:hover {
+    background-color: #555;
+    color: white;
+}
+
+.active{
+    background-color: #55719a;
+    color: white;
+}
+
+#contact{
+	width:20em;
+	margin:auto;
+	border: 1em solid #cce1ff;
+	padding:20px;
+
+}
+
 
