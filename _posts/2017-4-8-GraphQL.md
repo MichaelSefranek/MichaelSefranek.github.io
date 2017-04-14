@@ -52,7 +52,7 @@ Then after recieving _all_ the column data, you have to use some method to extra
 
 The more complex your data is, the more data _requests_ are made to your backend.  If my data schema also included Mike's _friends_, or _comments_, or _comments of comments_, the data queries could get long, complex, and contain much repetition. The data __endpoints__ I might have to define could explode: (for example: "localhost:3000/users/3/comments_of_comments_of_comments/"). <br>
 <br>
-In <a href="http://github.com/facebook/dataloader#using-with-graphql">this example</a>, they cite an example where up to __13 database requests are made__, whereas the same example could make at __most__ 4 database requests with a GraphQL schema implementing <a href="http://github.com/facebook/dataloader">__Dataloader__</a>.  Dataloader a _read-through cache_ which sends the minimum number or reqeusts to the server.  In other words, if you sent 13 requests, but 9 of them were repeats, it would make sure to only send the 4 necessary requests.  This means _speed_ , _efficiency_ , and _simplicity_ are at the core.
+In <a href="http://github.com/facebook/dataloader#using-with-graphql">this example</a>, they cite an example where up to __13 database requests are made__, whereas the same example could make at __most__ 4 database requests with a GraphQL schema implementing <a href="http://github.com/facebook/dataloader">__Dataloader__</a>.  Dataloader a _read-through cache_ which sends the minimum number or requests to the server.  In other words, if you sent 13 requests, but 9 of them were repeats, it would make sure to only send the 4 necessary requests.  This means _speed_ , _efficiency_ , and _simplicity_ are at the core.
 
 #### How do I use it?
 
