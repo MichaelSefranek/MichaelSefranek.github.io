@@ -121,6 +121,10 @@ h3{
     font-weight: 500;
 }
 
+#header{
+  z-index:1;
+}
+
 #header a{
     text-decoration: none;
     color: white;
@@ -432,7 +436,9 @@ h3{
     .ctextifbig{
       text-align:center;
     }
+
     #header{
+      z-index:3;
       position: absolute; 
       left: 0; 
       right: 0; 
