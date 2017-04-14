@@ -33,10 +33,7 @@
 }
 
 @keyframes first{
-   0% {
-      opacity: 0;
-   }
-   1.5% {
+   2% {
       opacity: 1;
    }
    30% {
@@ -45,7 +42,7 @@
    33% {
       opacity: 0;
    } 
-   100% {
+   98% {
       opacity: 0;
    }
 }
@@ -72,7 +69,7 @@
 }
 
 @keyframes third{
-    0% {
+    2% {
       opacity: 0;
     }
     60% {
@@ -81,12 +78,9 @@
     63% {
       opacity: 1;
     }
-    98.5% {
+    98% {
       opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }  
+    } 
 }
 #imageContainer1 img {
   position: absolute;
