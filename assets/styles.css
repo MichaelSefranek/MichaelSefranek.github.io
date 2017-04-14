@@ -575,13 +575,13 @@ p{
 
 .highlight {
   padding: 5px 10px 5px 10px;
-  background-color: #6fa7fc;
+  background-color: #054098;
   border-radius:2px;
   box-shadow: 2px 4px 4px black;
 }
 
 code{
-  color: black;
+  color: white;
   font-weight: 700;
   font-size: 16px;
 }
